@@ -14,7 +14,7 @@ body {
   height: 100vh;
   margin: 0;
   background-color: #09001d;
-  background-image: url(../assets/background.jpg);
+   background-image: url(../assets/background.jpg);
   background-size: cover;
   background-position: center; 
   background-attachment: fixed;
@@ -90,7 +90,7 @@ body {
   /* left: 20px; */
   border: 2px solid #c40094;
   border-radius: 6px;
-  height: 550px;
+  height: 580px;
   /* margin-right: 80px; */
 }
 
