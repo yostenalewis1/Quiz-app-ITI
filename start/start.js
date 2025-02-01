@@ -16,7 +16,7 @@ let questions = [];
 let currentQuestionIndex = 0;
 let score = 0;
 let timer;
-let timeLeft = 300;
+let timeLeft = 20;
 var flag = document.getElementsByClassName("flag")[0];
 var imgFlag = flag.querySelector("img");
 var markedFlag = false;
@@ -45,7 +45,7 @@ function startQuiz() {
   if (storedTime) {
     timeLeft = parseInt(storedTime);
   } else {
-    timeLeft = 300;
+    timeLeft = 20;
   }
   editTime();
   // document.querySelector(".container").classList.add("bg-blue");
