@@ -48,9 +48,10 @@ function startQuiz() {
     timeLeft = 300;
   }
   editTime();
-  document.querySelector(".container").classList.add("bg-blue");
+  // document.querySelector(".container").classList.add("bg-blue");
   // document.querySelector(".container").classList.remove("container");
   // document.querySelector("container").style.display = "none";
+  document.querySelector("body").style.backgroundImage = "none";
   document.querySelector(".card").style.display = "none";
   document.getElementById("quiz-container").style.display = "block";
   document.getElementById("quiz-flag").style.display = "block";
