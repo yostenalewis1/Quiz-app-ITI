@@ -1,4 +1,5 @@
 
+
 * {
   margin: 0;
   padding: 0;
@@ -10,14 +11,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
   margin: 0;
   background-color: #09001d;
   background-repeat: no-repeat;
   background-image: url(../assets/background.jpg);
   background-size: cover;
   background-position: center; 
-  background-attachment: fixed;
+ background-attachment: fixed;
 
 }
 
@@ -314,6 +315,7 @@ body {
     /* margin-top: 100px; */
   }
 
+
   .start-btn{
     padding: 10px 100px;
   }
@@ -382,4 +384,5 @@ body {
     font-size: 20px;
   }
 }
+ 
  
