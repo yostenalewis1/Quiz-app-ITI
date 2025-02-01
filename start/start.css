@@ -8,9 +8,9 @@
 
 body {
   font-family: Arial, sans-serif;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   margin: 0;
   background-color: #09001d;
@@ -18,14 +18,13 @@ body {
   background-image: url(../assets/background.jpg);
   background-size: cover;
   background-position: center; 
- background-attachment: fixed;
- overflow-y: hidden;
-
+  background-attachment: fixed;
 
 }
 
 .container {
   display: flex;
+ 
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -310,12 +309,11 @@ body {
 @media (max-width: 770px) {
   .container {
     max-width: 63%;
-    height: 920px;
+    /* height: 920px; */
     padding: 5%;
     margin: auto;
     /* margin-top: 100px; */
   }
-
 
   .start-btn{
     padding: 10px 100px;
@@ -385,5 +383,4 @@ body {
     font-size: 20px;
   }
 }
- 
  
