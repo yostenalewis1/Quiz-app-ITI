@@ -14,7 +14,6 @@ body {
   height: 100vh;
   margin: 0;
   background-color: #09001d;
-  background-repeat: no-repeat;
   background-image: url(../assets/background.jpg);
   background-size: cover;
   background-position: center; 
@@ -356,9 +355,7 @@ body {
 
    
     #flagged-questions {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+   margin-bottom: 50px;
   }
   #quiz-flag {
     position: relative;
@@ -369,6 +366,7 @@ body {
     padding: 10px;
     background-color: #09001d;
     margin: auto;
+  
   }
 
   #start-exam-animate{
