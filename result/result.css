@@ -1,0 +1,136 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #09001d;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+}
+ 
+
+ 
+.result-card {
+  background-color: transparent;
+  border-radius: 15px;
+  padding: 30px 40px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: white;
+  width: 600px;
+  border: 1px solid #c40094;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.result-card h1 {
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+
+.score-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#result-message {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+#result{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.logout-btn{
+  background-color: transparent;
+  border: 2px solid #c40094;
+  border-radius: 5px;
+  padding: 10px 40px;
+  font-size: 18px;
+  color: #fff ;
+  background-color: #c40094;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+ 
+}
+.btn {
+  background-color: transparent;
+  border: 2px solid #c40094;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 20px;
+  color: #fff ;
+  background-color: #c40094;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+ 
+
+
+
+@media (max-width: 768px) {
+  .result-card {
+    width: 80%;  
+    padding: 25px 20px;
+    height: auto; 
+  }
+
+  .result-card h1 {
+    font-size: 50px;  
+  }
+
+  .score-text {
+    font-size: 1.2rem; 
+  }
+
+  #result-message {
+    font-size: 1rem;  
+  }
+
+  .btn {
+    font-size: 0.9rem;  
+    padding: 8px 16px;
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+  .result-card {
+    width: 90%;  
+    margin: 0 auto;
+    height: auto;
+  }
+
+  .result-card h1 {
+    font-size: 40px;  
+  }
+  
+
+  .score-text {
+    font-size: 1rem; 
+  }
+
+  #result-message {
+    font-size: 0.9rem;  
+  }
+
+  .btn , .logout-btn{
+    font-size: 0.8rem;  
+    padding: 6px 12px;
+  }
+}

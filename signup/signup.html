@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="signup.css">
+</head> 
+<body>
+
+ 
+  <div class="main-container">
+   
+
+  <div class="container">
+    <h2>Sign Up</h2>
+    <form id="signup-form">
+      <label for="first-name">First Name</label>
+      <input type="text" id="first-name" placeholder="Enter First Name" >
+      <span class="error" id="fname-error">Enter a valid name format</span>               
+
+
+
+      <label for="last-name">Last Name</label>
+      <input type="text" id="last-name" placeholder="Enter Last Name">
+      <span class="error" id="lname-error">Enter a valid name format</span>               
+
+
+      <label for="email">Email</label>
+      <input type="email" id="signup-email" placeholder="example@example.com" >
+      <span class="error" id="email-error">Enter a valid email format</span>               
+
+      <label for="password">Password</label>
+      <input type="password" id="signup-password" placeholder="Enter a strong password" >
+      <span id="password-error">Password must be at least 9 characters long and contain letters and numbers.</span>
+
+      <label for="confirm-password">Confirm Password</label>
+      <input type="password" id="confirm-password" placeholder="Confirm Password" >
+      <span id="re-password-error">Passwords do not match.</span>
+
+      <button type="submit">Sign Up</button>
+    </form>
+    <div class="nav">
+      Are You Member?  <a href="../login/login.html">Log In</a>
+    
+    </div>
+  </div>
+
+  <img src="/assets/fill-out-animate.svg" alt="fill out form" class="fill-out-form" width="40%">
+ 
+</div>
+  <script src="signup.js"></script>
+</body>
+</html>
+ 

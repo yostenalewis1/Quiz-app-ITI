@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-image: url(./assets/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container h1 {
+  color: #fff;
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.container p {
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+
+  margin-bottom: 10px;
+}
+
+.container a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  background: #c40094;
+  border-radius: 6px;
+  border: 2px solid #f9f8f8;
+  margin-top: 20px;
+  width: 340px;
+  height: 55px;
+  padding-top: 6px;
+  box-shadow: 0 0 10px #c40094;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.container a:hover {
+  background: #09001d;
+  color: #fdfdfd;
+  box-shadow: none;
+}
+
+/* Responsive Design for Tablets */ 
+@media (max-width: 768px) {
+  .container h1 {
+    font-size: 3rem;
+  }
+
+  .container p {
+    font-size: 1.2rem;
+  }
+
+  .container a {
+    width: 80%;
+    font-size: 1.2rem;
+    height: 50px;
+  }
+}
+
+/* Responsive Design for Mobile Devices */
+ @media (max-width: 500px) {
+  .container h1 {
+    font-size: 2rem;
+  }
+
+  .container p {
+    font-size: 0.80rem;
+  }
+
+   .container a { 
+    width: 80%;
+    font-size: 1rem;
+    height: 45px;
+    padding-top: 9px;
+  }
+}
+
+@media (max-width: 330px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh; 
+  }
+
+  .container p {
+    text-align: center;
+    
+  }
+}
+
+
+@media (max-width: 255px) {
+ 
+.container a{
+  width: 250px;
+  height: 40px;
+}
+}

@@ -1,0 +1,73 @@
+[{
+  "question": "What does HTML stand for?",
+  "options": [
+    "Hyper Text Markup Language",
+    "Hyperlinks and Text Markup Language",
+    "Home Tool Markup Language",
+    "Hyper Text Machine Language"
+  ],
+  "answer": 0
+},
+{
+  "question": "Which HTML element is used to define a paragraph?",
+  "options": ["<para>", "<p>", "<par>", "<paragraph>"],
+  "answer":  1
+},
+
+{
+  "question": "Which HTML attribute is used to specify inline CSS styles?",
+  "options": ["class", "style", "css", "inline"],
+  "answer": 1
+},
+{
+  "question": "What does CSS stand for?",
+  "options": [
+    "Cascading Style Sheets",
+    "Creative Style Sheets",
+    "Computer Style Sheets",
+    "Colorful Style Sheets"
+  ],
+  "answer": 0
+},
+{
+  "question": "Which property is used in CSS to change the text color?",
+  "options": ["font-color", "text-color", "color", "text-style"],
+  "answer": 2
+},
+{
+  "question": "What is the correct syntax for a CSS comment?",
+  "options": [
+    "// This is a comment",
+    "<!-- This is a comment -->",
+    "/* This is a comment */",
+    "** This is a comment **"
+  ],
+  "answer": 2
+},
+{
+  "question": "Which tag is used to create a hyperlink in HTML?",
+  "options": ["<a>", "<link>", "<href>", "<url>"],
+  "answer": 0
+},
+
+{
+  "question": "What is the correct HTML element for the largest heading?",
+  "options": ["<h1>", "<heading>", "<head>", "<h6>"],
+  "answer": 0
+},
+{
+  "question": "What is the correct HTML element for inserting a line break?",
+  "options": ["<br>", "<break>", "<lb>", "<line>"],
+  "answer": 0
+},
+
+{
+  "question": "How do you specify that an HTML form input is required?",
+  "options": [
+    "required='true'",
+    "validate='true'",
+    "required",
+    "mandatory"
+  ],
+  "answer": 2
+}]
