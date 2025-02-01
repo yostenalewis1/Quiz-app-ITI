@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +13,7 @@ body {
   height: 100vh;
   margin: 0;
   background-color: #09001d;
-
+  background-repeat: no-repeat;
   background-image: url(../assets/background.jpg);
   background-size: cover;
   background-position: center;
