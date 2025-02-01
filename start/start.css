@@ -10,14 +10,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
   background-color: #09001d;
   background-repeat: no-repeat;
   background-image: url(../assets/background.jpg);
   background-size: cover;
   background-position: center; 
-   background-attachment: fixed;
+  background-attachment: fixed;
 
 }
 
