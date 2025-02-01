@@ -19,11 +19,6 @@ var regPassword =
       window.location.href = "../login/login.html";   
     }
   });
-  window.addEventListener('popstate', function () {
-    if (sessionStorage.getItem("Signedup") === "true") {
-      window.location.href = "../login/login.html";
-    }
-  });
   
 
 function checkFirstName() {

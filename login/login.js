@@ -8,11 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.location.href = "../start/start.html";
   }
 });
-window.addEventListener('popstate', function () {
-  if (localStorage.getItem("loggedIn") === "true") {
-    window.location.href = "../start/start.html";
-  }
-});
+ 
 
 loginForm.addEventListener("submit", function (event) {
   event.preventDefault();
