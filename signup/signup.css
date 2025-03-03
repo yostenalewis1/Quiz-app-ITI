@@ -53,7 +53,6 @@ button[type="submit"] {
   border : 2px solid #f9f8f8;
   margin-top: 20px;
   padding: 10px 20px;
-  box-shadow:  0 0 10px #c40094;
   text-align: center;
   transition: 0.5s;
   cursor: pointer;

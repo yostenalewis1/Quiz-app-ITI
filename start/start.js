@@ -30,7 +30,8 @@ function startTimer() {
   timer = setInterval(() => {
     if (timeLeft > 0) {
       timeLeft--;
-      sessionStorage.setItem("timeLeft", timeLeft);
+        sessionStorage.setItem("timeLeft", timeLeft);
+    
       editTime();
     } else {
       clearInterval(timer);
@@ -51,7 +52,7 @@ function startQuiz() {
   // document.querySelector(".container").classList.add("bg-blue");
   // document.querySelector(".container").classList.remove("container");
   // document.querySelector("container").style.display = "none";
-  document.querySelector("body").style.backgroundImage = "none";
+  // document.querySelector("body").style.backgroundImage = "none";
   document.querySelector(".card").style.display = "none";
   document.getElementById("quiz-container").style.display = "block";
   document.getElementById("quiz-flag").style.display = "block";
@@ -73,7 +74,7 @@ const shuffle = (array) => array.sort(() => Math.random() - 0.5);
 async function fetchQuestions() {
   try {
     showLoading();
-    const response = await fetch("../file.json");
+    const response = await fetch("../fivle.json");
     const data = await response.json();
 
     if (!data || data.length === 0) {
@@ -106,6 +107,8 @@ async function fetchQuestions() {
     console.error("Error fetching questions:", error);
     clearInterval(timer);
     document.getElementById("imgError").style.display = "block";
+    document.getElementsByTagName("body")[0].style.backgroundColor = "white";
+    document.getElementById("error-data-text").style.display = "block";
     document.getElementById("quiz-container").style.display = "none";
     document.getElementById("quiz-flag").style.display = "none";
     hideLoading();
@@ -158,7 +161,20 @@ function loadQuestion() {
 function loadFlaggedQuestions() {
   showMarkedFlag.innerHTML = "";
   for (let i = 0; i < questions.length; i++) {
-    if (sessionStorage.getItem("flaggedQuestion : " + i) === "true") {
+    if (sessionStorage.getItem(`flaggedQuestion:${questions[i].question}`) === "true") {
+      if(countFlagedQuestions() > 0)
+        {
+          const flagHeader = document.querySelector(".flag-header");
+          if (flagHeader) {
+            flagHeader.innerHTML = "Flagged Questions";
+          }
+        }else{
+          const flagHeader = document.querySelector(".flag-header");
+          if (flagHeader) {
+            flagHeader.innerHTML = "No Flagged Questions !";
+          }
+        } 
+         
       const questionDiv = document.createElement("div");
       questionDiv.classList.add("flagged-question");
 
@@ -177,15 +193,18 @@ function loadFlaggedQuestions() {
         currentQuestionIndex = i;
         loadQuestion();
         updateNavigationButtons();
+        
       });
       deleteBtn.addEventListener("click", function (event) {
         event.stopPropagation();
-        sessionStorage.removeItem("flaggedQuestion : " + i);
+        sessionStorage.removeItem(`flaggedQuestion:${questions[i].question}`);
         loadFlaggedQuestions();
         checkFlagQustion();
-
         imgFlag.src = "../assets/flag.png";
         imgFlag.style.height = "50px";
+        markedFlag = false; 
+
+        checkOfNumberFlaged()
       });
 
       questionDiv.classList.add("flagged-question-flex");
@@ -217,51 +236,29 @@ function prevQuestion() {
 
 function checkFlagQustion() {
   if (
-    sessionStorage.getItem("flaggedQuestion : " + currentQuestionIndex) ===
+    sessionStorage.getItem(`flaggedQuestion:${questions[currentQuestionIndex].question}`) ===
     "true"
   ) {
     markedFlag = true;
     imgFlag.src = "../assets/flagdone.png";
     imgFlag.style.height = "50px";
+    imgFlag.classList.add("flagged");
+
   }
+   
 }
-
-//   if (!markedFlag) {
-//     markedFlag = !markedFlag;
-//     imgFlag.src = "../assets/flagdone.png";
-//     imgFlag.style.height = "50px";
-
-//     const questionDiv = document.createElement("div");
-//     questionDiv.classList.add("flagged-question");
-//     questionDiv.innerHTML = `<p id="get-question">${questions[currentQuestionIndex].question}</p>`;
-//     showMarkedFlag.appendChild(questionDiv);
-
-//     sessionStorage.setItem("flaggedQuestion : " + currentQuestionIndex, "true");
-
-//     questionDiv.addEventListener("click", function() {
-//       currentQuestionIndex = questions.findIndex(q => q.question === questionDiv.querySelector('#get-question').textContent);
-//       loadQuestion();
-//       updateNavigationButtons();
-//     });
-//   } else {
-//     markedFlag = !markedFlag;
-//     imgFlag.src = "../assets/flag.png";
-//     imgFlag.style.height = "50px";
-//     showMarkedFlag.removeChild(showMarkedFlag.lastChild);
-//     sessionStorage.removeItem("flaggedQuestion : " + currentQuestionIndex);
-//   }
-// });
 
 flag.addEventListener("click", function () {
   if (!markedFlag) {
     markedFlag = !markedFlag;
     imgFlag.src = "../assets/flagdone.png";
     imgFlag.style.height = "50px";
+    imgFlag.classList.add("flagged");
 
     const questionDiv = document.createElement("div");
     questionDiv.classList.add("flagged-question");
     questionDiv.innerHTML = `<p id="get-question">${questions[currentQuestionIndex].question}</p>`;
-
+    
     const deleteBtn = document.createElement("img");
     deleteBtn.src = "../assets/delete.png";
     deleteBtn.alt = "Delete";
@@ -271,13 +268,14 @@ flag.addEventListener("click", function () {
 
     showMarkedFlag.appendChild(questionDiv);
 
-    sessionStorage.setItem("flaggedQuestion : " + currentQuestionIndex, "true");
+    sessionStorage.setItem(`flaggedQuestion:${questions[currentQuestionIndex].question}`, "true");
+
 
     loadFlaggedQuestions();
 
     deleteBtn.addEventListener("click", function (event) {
       event.stopPropagation();
-      sessionStorage.removeItem("flaggedQuestion : " + currentQuestionIndex);
+      sessionStorage.removeItem(`flaggedQuestion:${questions[currentQuestionIndex].question}`);
       loadFlaggedQuestions();
       checkFlagQustion();
     });
@@ -285,8 +283,17 @@ flag.addEventListener("click", function () {
     markedFlag = !markedFlag;
     imgFlag.src = "../assets/flag.png";
     imgFlag.style.height = "50px";
-    showMarkedFlag.removeChild(showMarkedFlag.lastChild);
-    sessionStorage.removeItem("flaggedQuestion : " + currentQuestionIndex);
+    sessionStorage.removeItem(`flaggedQuestion:${questions[currentQuestionIndex].question}`);
+    
+    console.log(countFlagedQuestions());
+    const flagHeader = document.querySelector(".flag-header");
+    if (countFlagedQuestions() === 0) {
+        if (flagHeader) {
+            flagHeader.innerHTML = "No Flagged Questions !";
+        }
+    }
+    loadFlaggedQuestions();
+     
   }
 });
 
@@ -294,8 +301,7 @@ function updateNavigationButtons() {
   document.getElementById("prev-btn").disabled = currentQuestionIndex === 0;
   document.getElementById("next-btn").style.display =
     currentQuestionIndex === questions.length - 1 ? "none" : "inline";
-  document.getElementById("submit-btn").style.display =
-    currentQuestionIndex === questions.length - 1 ? "inline" : "none";
+  
 }
 
 function submitQuiz() {
@@ -326,4 +332,24 @@ function updateQuestionNumber() {
   questionNumberElement.textContent = `${currentQuestionIndex + 1} of ${
     questions.length
   } Questions`;
+}
+
+function checkOfNumberFlaged()
+{
+  if (document.querySelectorAll(".flagged-question").length === 0) {
+    const flagHeader = document.querySelector(".flag-header");
+    if (flagHeader) {
+        flagHeader.innerHTML = "No Flagged Questions !";
+    }
+}
+}
+
+function countFlagedQuestions() {
+  let count = 0;
+  for (let i = 0; i < questions.length; i++) {
+    if (sessionStorage.getItem(`flaggedQuestion:${questions[i].question}`) === "true") {
+      count++;
+    }
+  }
+  return count;
 }

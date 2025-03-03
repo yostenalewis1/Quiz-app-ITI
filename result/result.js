@@ -30,5 +30,6 @@ function logOut() {
   localStorage.removeItem("loggedIn");
   localStorage.removeItem("currentUserEmail");
   localStorage.removeItem("currentUserName");
+  sessionStorage.clear();
   window.location.href = "../index.html";
 }

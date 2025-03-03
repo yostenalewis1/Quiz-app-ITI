@@ -58,12 +58,12 @@ body {
 }
 .logout-btn{
   background-color: transparent;
-  border: 2px solid #c40094;
   border-radius: 5px;
   padding: 10px 40px;
   font-size: 18px;
-  color: #fff ;
-  background-color: #c40094;
+  color: #ffffff ;
+  border : 2px solid #f9f8f8;
+   
   cursor: pointer;
   transition: all 0.3s ease-in-out;
  

@@ -5,86 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Start Exam</title>
     <link rel="stylesheet" href="start.css" />
-    <link rel="stylesheet" href="loading.css">
+    <link rel="stylesheet" href="loading.css" />
   </head>
   <body>
     <div class="container">
       <div class="card">
         <h1>Are you ready to start the exam?</h1>
         <div id="img-start">
-           <object type="image/svg+xml" data="../assets/exams-animate.svg" class="animated" id="start-exam-animate"  >
-          Your browser does not support SVG
-        </object>
+          <object
+            type="image/svg+xml"
+            data="../assets/exams-animate.svg"
+            class="animated"
+            id="start-exam-animate"
+          >
+            Your browser does not support SVG
+          </object>
         </div>
-       
 
         <button class="start-btn">Start</button>
       </div>
     </div>
-
-    <img src="https://media.licdn.com/dms/image/v2/C5112AQEw1fXuabCTyQ/article-inline_image-shrink_1500_2232/article-inline_image-shrink_1500_2232/0/1581099611064?e=1740614400&v=beta&t=XC-J2SdT9zU20hER4WyzPBWk9mZ8k4uB35FJqVU1nx0"
-    id="imgError" style="display: none; "
-     />
-
-      <object type="image/svg+xml" data="../assets/empty-animate.svg" style="display: none;" class="animated" id="empty-data-animate" width="500" height="500">
-        Your browser does not support SVG
-      </object>
-      <p style="display: none;" id="no-data-text">Opps ! there is no data
-      </p>
   
-   
-   <div class="second-page">
- 
-
-    <div id="quiz-container" class="container" style="display: none">
-      <div class="define-question">
-        <div id="timer" >Time Left: 5:00</div>
-        <h1>Html Css Quiz</h1>
-        <a class="flag">
-          <img src="../assets/flag.png" alt="codehal logo" height="50px"
-        /></a>
-      </div>
-      
-      <div class="lds-spinner" id="loading" style="display: none ; margin-top: -10px" id="loader">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      
-      <div id="question"></div>
-      <div id="options" class="options"></div>
-
-      <div class="quiz-footer">
-        <button id="prev-btn" onclick="prevQuestion()">Previous</button>
-        <button id="next-btn" onclick="nextQuestion()">Next</button>
-        <button id="submit-btn" onclick="submitQuiz()" style="display: none">
-          Submit
-        </button>
-        <span id="question-number">1 of 5 Qestions</span>
-      </div>
-
-   
-    </div>
-
-    <div id="quiz-flag" style="display: none">
-      <h1 class="flag-header">Flagged Questions</h1>
-      <div id="flagged-questions"></div>
-    </div>
-
     
-  </div>
-     
-   
-   
+
+      <img
+        src="../assets/error message.jpg"
+        id="imgError"
+      /> 
+  
+      <p id="error-data-text" style="display: none ">Oops! Something went wrong. Please return to the <a href="../index.html">Home</a> page</p>
+      
+    <object
+      type="image/svg+xml"
+      data="../assets/empty-animate.svg"
+      style="display: none"
+      class="animated"
+      id="empty-data-animate"
+      width="500"
+      height="500"
+    >
+      Your browser does not support SVG
+    </object>
+    <p style="display: none" id="no-data-text">Opps ! there is no data</p>
+
+    <div class="second-page">
+      <div id="quiz-container" class="container" style="display: none">
+        <div class="define-question">
+          <div id="timer">Time Left: 5:00</div>
+          <h1> Html Css Quiz</h1>
+          <a class="flag">
+            <img src="../assets/flag.png" alt="codehal logo" height="50px"
+          /></a>
+        </div>
+
+        <div
+          class="lds-spinner"
+          id="loading"
+          style="display: none; margin-top: -10px"
+          id="loader"
+        >
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <div id="question"></div>
+        <div id="options" class="options"></div>
+
+        <div class="quiz-footer">
+          <button id="prev-btn" onclick="prevQuestion()">Previous</button>
+          <button id="next-btn" onclick="nextQuestion()">Next</button>
+          <button id="submit-btn" onclick="submitQuiz()">
+            Submit
+          </button>
+          <span id="question-number">1 of 5 Qestions</span>
+        </div>
+      </div>
+
+      <div id="quiz-flag" style="display: none">
+        <h1 class="flag-header">No Flagged Questions !</h1>
+        <div id="flagged-questions"></div>
+      </div>
+    </div>
+
     <script src="start.js"></script>
   </body>
 </html>

@@ -7,52 +7,52 @@
 }
 
 svg#freepik_stories-fill-out.animated #freepik--Floor--inject-5 {
-    animation: 3s infinite forwards cubic-bezier(.36,-0.01,.5,1.38) slideLeft;
+    animation: 8s infinite forwards cubic-bezier(.36,-0.01,.5,1.38) slideLeft;
     animation-delay: 0s;
 }
 
 svg#freepik_stories-fill-out.animated #freepik--Shadows--inject-5 {
-    animation: 3s infinite forwards cubic-bezier(.36,-0.01,.5,1.38) slideRight;
+    animation: 8s infinite forwards cubic-bezier(.36,-0.01,.5,1.38) slideRight;
     animation-delay: 0s;
 }
 
 svg#freepik_stories-fill-out.animated #freepik--Gears--inject-5 {
-    animation: 3s infinite forwards cubic-bezier(.36,-0.01,.5,1.38) slideUpDown;
+    animation: 8s infinite forwards cubic-bezier(.36,-0.01,.5,1.38) slideUpDown;
     animation-delay: 0s;
 }
 
 svg#freepik_stories-fill-out.animated #freepik--Pictures--inject-5 {
-    animation: 3s infinite forwards cubic-bezier(.36,-0.01,.5,1.38) zoomOut;
+    animation: 8s infinite forwards cubic-bezier(.36,-0.01,.5,1.38) zoomOut;
     animation-delay: 0s;
 }
 
 svg#freepik_stories-fill-out.animated #freepik--Window--inject-5 {
-    animation: 3s infinite forwards cubic-bezier(.36,-0.01,.5,1.38) slideUpDown; /* تعديل هنا */
+    animation: 8s infinite forwards cubic-bezier(.36,-0.01,.5,1.38) slideUpDown; /* تعديل هنا */
     animation-delay: 0s;
 }
 
 svg#freepik_stories-fill-out.animated #freepik--Plants--inject-5 {
-    animation: 3s infinite forwards cubic-bezier(.36,-0.01,.5,1.38) slideDown;
+    animation: 8s infinite forwards cubic-bezier(.36,-0.01,.5,1.38) slideDown;
     animation-delay: 0s;
 }
 
 svg#freepik_stories-fill-out.animated #freepik--Clipboard--inject-5 {
-    animation: 3s infinite forwards cubic-bezier(.36,-0.01,.5,1.38) zoomIn;
+    animation: 8s infinite forwards cubic-bezier(.36,-0.01,.5,1.38) zoomIn;
     animation-delay: 0s;
 }
 
 svg#freepik_stories-fill-out.animated #freepik--clip--inject-5 {
-    animation: 3s infinite forwards cubic-bezier(.36,-0.01,.5,1.38) lightSpeedRight;
+    animation: 8s infinite forwards cubic-bezier(.36,-0.01,.5,1.38) lightSpeedRight;
     animation-delay: 0s;
 }
 
 svg#freepik_stories-fill-out.animated #freepik--Character--inject-5 {
-    animation: 3s infinite forwards cubic-bezier(.36,-0.01,.5,1.38) zoomIn;
+    animation: 8s infinite forwards cubic-bezier(.36,-0.01,.5,1.38) zoomIn;
     animation-delay: 0s;
 }
 
 svg#freepik_stories-fill-out.animated #freepik--speech-bubble--inject-5 {
-    animation: 3s infinite forwards cubic-bezier(.36,-0.01,.5,1.38) slideDown;
+    animation: 8s infinite forwards cubic-bezier(.36,-0.01,.5,1.38) slideDown;
     animation-delay: 0s;
 }
 
